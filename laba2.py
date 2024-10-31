@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-# Base class for all game objects
 class GameObject:
     next_id = 1
     
@@ -94,9 +93,6 @@ class MobileHouse(Building, Moveable):
         print(f"{self.getName()} moves from ({self.getX()}, {self.getY()}) to ({target_x}, {target_y})")
         self._coord_x = target_x
         self._coord_y = target_y
-
-
-
 
 archer = Archer("Archer", 1, 2, 100, 10)
 enemy_unit = Unit("Enemy", 3, 77, 10)
