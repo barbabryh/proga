@@ -27,13 +27,13 @@ class Context:
         return self._strategy.do_operation(num1, num2)
 
 context = Context(OperationAdd())
-print("10 + 5 =", context.execute_strategy(10, 5))
+print(context.execute_strategy(10, 5))
 
 context = Context(OperationSubtract())
-print("10 - 5 =", context.execute_strategy(10, 5))
+print(context.execute_strategy(10, 5))
 
 context = Context(OperationMultiply())
-print("10 * 5 =", context.execute_strategy(10, 5))
+print(context.execute_strategy(10, 5))
 
 
 #Цепочка обязанностей
