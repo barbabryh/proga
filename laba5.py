@@ -1,14 +1,14 @@
 #1
 class Real:
     def action(self):
-        return "Реальная операция."
+        return "Real operation"
 
 class Proxy:
     def __init__(self, real):
         self.real = real
 
     def action(self):
-        print("Проверка перед вызовом.")
+        print("Pre-check call")
         return self.real.action()
 
 
@@ -19,18 +19,18 @@ print(proxy.action())
 #2
 class ImplA:
     def run(self):
-        return "Работа A"
+        return "A"
 
 class ImplB:
     def run(self):
-        return "Работа B"
+        return "B"
 
 class Bridge:
     def __init__(self, impl):
         self.impl = impl
 
     def use(self):
-        return f"Используем: {self.impl.run()}"
+        return f"Use: {self.impl.run()}"
 
 a = ImplA()
 b = ImplB()
